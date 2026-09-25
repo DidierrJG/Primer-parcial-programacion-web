@@ -5,17 +5,21 @@ function cargarTabla() {
     
     if(db) {
         const datos = JSON.parse(db);
-
-        const fila = document.createElement("tr");
         
         for(const property in datos) {
+            const fila = document.createElement("tr");
+
             const concepto = document.createElement("td");
-            TextDecoder.textContent = property;
-
+            concepto.textContent = property.replaceAll("\n", "");
             fila.appendChild(concepto);
-        }
 
-        tabla.appendChild(fila);
+            const cantidad = document.createElement("td");
+            cantidad.textContent = datos[property];
+            fila.appendChild(cantidad);
+            
+            tabla.appendChild(fila);
+        }
+        
     } else {
         tabla.innerHTML = "";
 
