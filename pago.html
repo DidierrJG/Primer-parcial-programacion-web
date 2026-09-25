@@ -28,7 +28,49 @@
         </nav>
     </header>
     <main>
-
+        <section>
+            <label for="fecha">
+                Fecha:
+            </label>
+            <input name="fecha" type="date" id="fecha">
+            <label for="numero-pedido">
+                Pedido numero:
+            </label>
+            <input name="numero-pedido" type="text" id="numero-pedido">
+            <label for="cliente">
+                Cliente:
+            </label>
+            <input name="cliente" type="text" id="cliente">
+        </section>
+        <section>
+            <h2>
+                Relacion de Productos
+            </h2>
+            <table>
+                <tr>
+                    <th>
+                        Concepto
+                    </th>
+                    <th>
+                        Cantidad
+                    </th>
+                    <th>
+                        Valor
+                    </th>
+                    <th>
+                        Subtotal
+                    </th>
+                </tr>
+            </table>
+            <div>
+                <p>
+                    Total
+                </p>
+                <p id="precio-total">
+                </p>
+            </div>
+        </section>
     </main>
 </body>
+<script src="js/pago.js"></script>
 </html>
